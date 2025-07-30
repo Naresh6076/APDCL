@@ -1,200 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>APDCL Dashboard</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial‑scale=1.0"/>
+  <title>APDCL - Assam Power Distribution Company Limited</title>
   <style>
     :root {
       --primary-blue: #007acc;
       --accent-orange: #ff6600;
-      --light-bg: #f2f9ff;
+      --light-bg: #f5faff;
       --dark-text: #1e1e1e;
     }
-
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--light-bg);
+      margin:0;
+      font-family: Arial, sans-serif;
+      background: var(--light-bg);
       color: var(--dark-text);
     }
-
     header {
-      display: flex;
-      align-items: center;
-      background: linear-gradient(to right, var(--primary-blue), var(--accent-orange));
+      display:flex;
+      align-items:center;
+      padding:10px 20px;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header img.logo {
+      height:60px;
+      margin-right:15px;
+    }
+    .logo-text {
+      line-height:1.2;
+    }
+    .logo-text h1 { margin:0; font-size:1.2rem; color: var(--primary-blue); }
+    .logo-text p { margin:2px 0; font-size:0.9rem; }
+
+    nav {
+      background: var(--primary-blue);
       color: white;
-      padding: 15px 30px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 8px 20px;
+      font-size: 0.95rem;
     }
-
-    .logo-section {
-      display: flex;
-      flex-direction: column;
+    nav a {
+      color:white;
+      margin-right:15px;
+      text-decoration:none;
     }
-
-    .logo-section h1 {
-      font-size: 1.4rem;
-      margin: 0;
-    }
-
-    .logo-section p {
-      font-size: 0.9rem;
-      margin: 0;
-    }
+    nav a:hover { text-decoration: underline; }
 
     .banner {
-      width: 100%;
-      height: 250px;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/132kV_Electricity_pole.jpg/1200px-132kV_Electricity_pole.jpg') no-repeat center center;
-      background-size: cover;
+      height:200px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/132kV_Electricity_pole.jpg/1200px-132kV_Electricity_pole.jpg') center/cover no-repeat;
+      position: relative;
       filter: brightness(0.85);
     }
 
-    .dropdowns-container {
+    .dropdown-section {
+      padding: 30px 20px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      padding: 40px 20px;
       gap: 20px;
+      justify-content: center;
     }
-
     .dropdown {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
       background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      border-left: 4px solid var(--primary-blue);
-      min-width: 220px;
+      border-radius:8px;
+      padding:12px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      border-left:4px solid var(--accent-orange);
+      width:200px;
     }
-
     .dropdown label {
-      font-weight: bold;
-      margin-bottom: 8px;
+      font-weight:bold;
       color: var(--primary-blue);
+      display:block;
+      margin-bottom:6px;
     }
-
     .dropdown select {
-      padding: 8px 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-      width: 100%;
+      width:100%;
+      padding:6px;
+      border-radius:4px;
+      border:1px solid #ccc;
     }
 
     footer {
       background: var(--primary-blue);
       color: white;
       text-align: center;
-      padding: 15px;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-      }
-
-      .dropdowns-container {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .dropdown {
-        width: 90%;
-      }
+      padding:15px;
+      font-size:0.9rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header with logo text -->
   <header>
-    <div class="logo-section">
-      <h1>??? ????? ????? ???????? ???????</h1>
-      <p>??? ?????? ??????? ????? ??? ???????? ????????</p>
+    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/132kV_Electricity_pole.jpg/1200px-132kV_Electricity_pole.jpg" alt="APDCL Logo"/>
+    <div class="logo-text">
+      <h1>অসম শক্তি বিতৰণ কোম্পানী লিমিটেড</h1>
+      <p>অসম চৰকাৰৰ ৰাজহুৱা খণ্ডৰ এটি পৰিসীমিত কোম্পানী</p>
       <p>ASSAM POWER DISTRIBUTION COMPANY LIMITED</p>
       <p>A Govt. of Assam Public Limited Company</p>
     </div>
   </header>
 
-  <!-- Banner Image -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Pay Bill</a>
+    <a href="#">New Connection</a>
+    <a href="#">Consumer Grievance</a>
+    <a href="#">Contact</a>
+  </nav>
+
   <div class="banner"></div>
 
-  <!-- Dropdowns Section -->
-  <div class="dropdowns-container">
-    <!-- 12 Dropdowns Placeholder -->
-    <!-- Replace "Option A / B" with your real dropdown names later -->
+  <section class="dropdown-section">
+    <!-- 12 dropdowns placeholder -->
+    <div class="dropdown"><label for="d1">Name 1</label><select id="d1"><option>Select</option></select></div>
+    <div class="dropdown"><label for="d2">Name 2</label><select id="d2"><option>Select</option></select></div>
+    <div class="dropdown"><label for="d3">Name 3</label><select id="d3"><option>Select</option></select></div>
+    <div class="dropdown"><label for="d4">Name 4</label><select id="d4"><option>Select</option></select></div>
+    <div class="dropdown"><label for="d5">Name 5</label><select id="d5"><option>Select</option></select></div>
+    <div class="dropdown"><label for="d6">Name 6</label><select id="d6"><option>Select</option></select></div>
+    <div class="dropdown"><label for="d7">Name 7</label><select id="d7"><option>Select</option></select></div>
+    <div class="dropdown"><label for="d8">Name 8</label><select id="d8"><option>Select</option></select></div>
+    <div class="dropdown"><label for="d9">Name 9</label><select id="d9"><option>Select</option></select></div>
+    <div class="dropdown"><label for="d10">Name 10</label><select id="d10"><option>Select</option></select></div>
+    <div class="dropdown"><label for="d11">Name 11</label><select id="d11"><option>Select</option></select></div>
+    <div class="dropdown"><label for="d12">Name 12</label><select id="d12"><option>Select</option></select></div>
+  </section>
 
-    <div class="dropdown">
-      <label for="dropdown1">Option 1</label>
-      <select id="dropdown1"><option>Select</option></select>
-    </div>
-
-    <div class="dropdown">
-      <label for="dropdown2">Option 2</label>
-      <select id="dropdown2"><option>Select</option></select>
-    </div>
-
-    <div class="dropdown">
-      <label for="dropdown3">Option 3</label>
-      <select id="dropdown3"><option>Select</option></select>
-    </div>
-
-    <div class="dropdown">
-      <label for="dropdown4">Option 4</label>
-      <select id="dropdown4"><option>Select</option></select>
-    </div>
-
-    <div class="dropdown">
-      <label for="dropdown5">Option 5</label>
-      <select id="dropdown5"><option>Select</option></select>
-    </div>
-
-    <div class="dropdown">
-      <label for="dropdown6">Option 6</label>
-      <select id="dropdown6"><option>Select</option></select>
-    </div>
-
-    <div class="dropdown">
-      <label for="dropdown7">Option 7</label>
-      <select id="dropdown7"><option>Select</option></select>
-    </div>
-
-    <div class="dropdown">
-      <label for="dropdown8">Option 8</label>
-      <select id="dropdown8"><option>Select</option></select>
-    </div>
-
-    <div class="dropdown">
-      <label for="dropdown9">Option 9</label>
-      <select id="dropdown9"><option>Select</option></select>
-    </div>
-
-    <div class="dropdown">
-      <label for="dropdown10">Option 10</label>
-      <select id="dropdown10"><option>Select</option></select>
-    </div>
-
-    <div class="dropdown">
-      <label for="dropdown11">Option 11</label>
-      <select id="dropdown11"><option>Select</option></select>
-    </div>
-
-    <div class="dropdown">
-      <label for="dropdown12">Option 12</label>
-      <select id="dropdown12"><option>Select</option></select>
-    </div>
-  </div>
-
-  <!-- Footer -->
   <footer>
-    &copy; 2025 Assam Power Distribution Company Limited (APDCL) | All Rights Reserved.
+    &copy; 2025 Assam Power Distribution Company Limited | Consumer Care: 1912, support@apdcl.org
   </footer>
 
 </body>
