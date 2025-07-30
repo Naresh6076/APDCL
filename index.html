@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>APDCL Dashboard</title>
+  <style>
+    :root {
+      --primary-blue: #007acc;
+      --accent-orange: #ff6600;
+      --light-bg: #f2f9ff;
+      --dark-text: #1e1e1e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--dark-text);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(to right, var(--primary-blue), var(--accent-orange));
+      color: white;
+      padding: 15px 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .logo-section {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-section h1 {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+
+    .logo-section p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .banner {
+      width: 100%;
+      height: 250px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/132kV_Electricity_pole.jpg/1200px-132kV_Electricity_pole.jpg') no-repeat center center;
+      background-size: cover;
+      filter: brightness(0.85);
+    }
+
+    .dropdowns-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .dropdown {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-left: 4px solid var(--primary-blue);
+      min-width: 220px;
+    }
+
+    .dropdown label {
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: var(--primary-blue);
+    }
+
+    .dropdown select {
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    footer {
+      background: var(--primary-blue);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+
+      .dropdowns-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .dropdown {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with logo text -->
+  <header>
+    <div class="logo-section">
+      <h1>??? ????? ????? ???????? ???????</h1>
+      <p>??? ?????? ??????? ????? ??? ???????? ????????</p>
+      <p>ASSAM POWER DISTRIBUTION COMPANY LIMITED</p>
+      <p>A Govt. of Assam Public Limited Company</p>
+    </div>
+  </header>
+
+  <!-- Banner Image -->
+  <div class="banner"></div>
+
+  <!-- Dropdowns Section -->
+  <div class="dropdowns-container">
+    <!-- 12 Dropdowns Placeholder -->
+    <!-- Replace "Option A / B" with your real dropdown names later -->
+
+    <div class="dropdown">
+      <label for="dropdown1">Option 1</label>
+      <select id="dropdown1"><option>Select</option></select>
+    </div>
+
+    <div class="dropdown">
+      <label for="dropdown2">Option 2</label>
+      <select id="dropdown2"><option>Select</option></select>
+    </div>
+
+    <div class="dropdown">
+      <label for="dropdown3">Option 3</label>
+      <select id="dropdown3"><option>Select</option></select>
+    </div>
+
+    <div class="dropdown">
+      <label for="dropdown4">Option 4</label>
+      <select id="dropdown4"><option>Select</option></select>
+    </div>
+
+    <div class="dropdown">
+      <label for="dropdown5">Option 5</label>
+      <select id="dropdown5"><option>Select</option></select>
+    </div>
+
+    <div class="dropdown">
+      <label for="dropdown6">Option 6</label>
+      <select id="dropdown6"><option>Select</option></select>
+    </div>
+
+    <div class="dropdown">
+      <label for="dropdown7">Option 7</label>
+      <select id="dropdown7"><option>Select</option></select>
+    </div>
+
+    <div class="dropdown">
+      <label for="dropdown8">Option 8</label>
+      <select id="dropdown8"><option>Select</option></select>
+    </div>
+
+    <div class="dropdown">
+      <label for="dropdown9">Option 9</label>
+      <select id="dropdown9"><option>Select</option></select>
+    </div>
+
+    <div class="dropdown">
+      <label for="dropdown10">Option 10</label>
+      <select id="dropdown10"><option>Select</option></select>
+    </div>
+
+    <div class="dropdown">
+      <label for="dropdown11">Option 11</label>
+      <select id="dropdown11"><option>Select</option></select>
+    </div>
+
+    <div class="dropdown">
+      <label for="dropdown12">Option 12</label>
+      <select id="dropdown12"><option>Select</option></select>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Assam Power Distribution Company Limited (APDCL) | All Rights Reserved.
+  </footer>
+
+</body>
+</html>
